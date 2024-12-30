@@ -67,4 +67,4 @@ This module is distributed under the GNU/GPL   License. See LICENSE file for det
 
 
 ## Screenshots
-![alt text](https://github.com/MorphyKutay/CS2-ESP-Cheat/blob/main/ss.png)
+![alt text](https://github.com/MorphyKutay/OpenCart_ProductCurrencyUpdater_v1/blob/main/ss.png)
