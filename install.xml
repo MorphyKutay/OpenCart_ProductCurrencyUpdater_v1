@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+    <id>currency_converter</id>
+    <name>Para Birimi Dönüştürücü</name>
+    <version>1.0</version>
+    <type>module</type>
+    <author>MorphyKutay</author>
+    <link>https://github.com/MorphyKutay/</link>
+    <code>currency_converter</code>
+    <files>
+        <file>admin/controller/extension/module/currency_converter.php</file>
+        <file>admin/language/tr-tr/extension/module/currency_converter.php</file>
+        <file>admin/view/template/extension/module/currency_converter.twig</file>
+        <file>system/library/currency_converter/modification.xml</file>
+    </files>
+</extension> 

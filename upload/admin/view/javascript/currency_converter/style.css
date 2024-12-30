@@ -1,0 +1,43 @@
+/* Journal Tema Uyumlu Stiller */
+.j-container {
+    background: var(--j-bg);
+    padding: 20px;
+    border-radius: var(--j-border-radius);
+}
+
+.j-header {
+    margin-bottom: 20px;
+}
+
+.j-btn {
+    border-radius: var(--j-border-radius) !important;
+}
+
+.j-panel {
+    border-radius: var(--j-border-radius);
+    border: 1px solid var(--j-border);
+}
+
+.j-panel-header {
+    background: var(--j-bg-secondary);
+    border-radius: var(--j-border-radius) var(--j-border-radius) 0 0;
+}
+
+.j-panel-body {
+    padding: 20px;
+}
+
+.j-well {
+    background: var(--j-bg-light);
+    border: 1px solid var(--j-border);
+    border-radius: var(--j-border-radius);
+}
+
+.currency-converter-checkbox {
+    margin: 10px 0;
+}
+
+.currency-converter-image {
+    border-radius: var(--j-border-radius);
+    border: 1px solid var(--j-border);
+} 

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>Para Birimi Dönüştürücü</name>
+    <code>currency_converter_journal</code>
+    <version>1.0</version>
+    <author>MorphyKutay</author>
+    <link>https://github.com/MorphyKutay/</link>
+    
+    <!-- Journal Tema Menü Entegrasyonu -->
+    <file path="catalog/controller/journal3/layout.php">
+        <operation>
+            <search><![CDATA[public function index() {]]></search>
+            <add position="after"><![CDATA[
+                // Para Birimi Dönüştürücü için Journal3 entegrasyonu
+                if ($this->config->get('module_currency_converter_status')) {
+                    $this->load->language('extension/module/currency_converter');
+                    $data['currency_converter_status'] = true;
+                } else {
+                    $data['currency_converter_status'] = false;
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- Journal Admin Panel Entegrasyonu -->
+    <file path="admin/controller/journal3/setting.php">
+        <operation>
+            <search><![CDATA[public function index() {]]></search>
+            <add position="after"><![CDATA[
+                // Para Birimi Dönüştürücü ayarlarını Journal ayarlarına ekle
+                if ($this->config->get('module_currency_converter_status')) {
+                    $data['currency_converter_enabled'] = true;
+                } else {
+                    $data['currency_converter_enabled'] = false;
+                }
+            ]]></add>
+        </operation>
+    </file>
+
+    <!-- Journal Stil Entegrasyonu -->
+    <file path="catalog/view/theme/journal3/template/common/header.twig">
+        <operation>
+            <search><![CDATA[</head>]]></search>
+            <add position="before"><![CDATA[
+                {% if currency_converter_status %}
+                <style type="text/css">
+                    /* Para Birimi Dönüştürücü Journal Tema Stilleri */
+                    .currency-converter-container {
+                        padding: 15px;
+                        background: var(--j-bg);
+                        border-radius: var(--j-border-radius);
+                        margin-bottom: 20px;
+                    }
+                    .currency-converter-container .btn {
+                        background: var(--j-accent);
+                        color: var(--j-accent-text);
+                        border-radius: var(--j-border-radius);
+                    }
+                    .currency-converter-container .form-control {
+                        border-radius: var(--j-border-radius);
+                        border: 1px solid var(--j-border);
+                    }
+                </style>
+                {% endif %}
+            ]]></add>
+        </operation>
+    </file>
+</modification> 
